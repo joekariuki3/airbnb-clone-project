@@ -11,9 +11,9 @@ Airbnb Clone project is designed to provide a robust and scalable foundation for
 - Review System - Allow users to leave reviews and ratings for properties.
 - Data Optimization - Ensure efficient data retrieval and storage through database optimizations.
 
-## Tech Stack
+## Technology Stack
 
-- Django - for building the RESTful API.
+- Django - a web framework for building the RESTful API.
 - Django REST Framework - Will be used to Provides tools for creating and managing RESTful APIs.
 - PostgreSQL - A relational database used for data storage.
 - GraphQL - Will allows for flexible and efficient querying of data.
