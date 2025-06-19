@@ -28,3 +28,62 @@ Airbnb Clone project is designed to provide a robust and scalable foundation for
 - **Database Administrator** - Manages database design, indexing and optimizations.
 - **DevOps Engineer** - Handles deployment, monitoring and scaling of the backend service
 - **QA Engineer** - Ensures the backend functionalities are thoroughly tested and meet quality standards.
+
+## Database Design
+
+### Key entities
+
+1. **Users**: Represents individuals using the platform, either as hosts or guests.
+   - **Important Fields**
+     - id: Unique identifier for each user.
+     - name: Full name of the user.
+     - email: Used for login and communication.
+     - password: Hashed password for authentication.
+     - role: Defines the user's role, such as host or guest.
+   - **Relationships**
+     - A user can list multiple properties (if host).
+     - A user can make multiple bookings (if guest).
+     - A user can write multiple reviews.
+     - A user can make multiple payments.
+2. **Properties**: Represents properties listed by hosts for booking.
+   - **Important Fields**
+     - id: Unique identifier for each property.
+     - title: The name or headline of the property listing.
+     - description: Detailed description of the property.
+     - price_per_night: Cost of booking the property per night.
+     - owner_id: Foreign key linking to the user who owns the property.
+   - **Relationships**
+     - A property belongs to one user (host).
+     - A property can have many bookings.
+     - A property can have many reviews.
+3. **Bookings**: Represents reservations made by guests to stay at properties.
+   - **Important Fields**
+     - id: Unique identifier for each booking.
+     - user_id: Foreign key referencing the guest who made the booking.
+     - property_id: Foreign key referencing the booked property.
+     - check_in: Date of check-in.
+     - check_out: Date of check-out.
+   - **Relationships**
+     - A booking belongs to a user (guest).
+     - A booking belongs to a property.
+     - A booking can have one associated payment.
+4. **Reviews**: Represents user feedback and ratings for properties after a stay.
+   - **Important Fields**
+     - id: Unique identifier for each review.
+     - user_id: Foreign key referencing the reviewer (guest).
+     - property_id: Foreign key referencing the reviewed property.
+     - rating: Numeric rating (e.g., 1 to 5).
+     - comment: Textual feedback about the stay.
+   - **Relationships**
+     - A review belongs to a user (guest).
+     - A review belongs to a property.
+5. **Payments**: Represents financial transactions made for bookings.
+   - **Important Fields**
+     - id: Unique identifier for each payment.
+     - user_id: Foreign key referencing the user who made the payment.
+     - booking_id: Foreign key referencing the related booking.
+     - amount: Total payment amount.
+     - status: Status of the transaction (e.g., pending, completed).
+   - **Relationships**
+     - A payment belongs to a user.
+     - A payment is linked to one booking.
