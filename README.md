@@ -87,3 +87,22 @@ Airbnb Clone project is designed to provide a robust and scalable foundation for
    - **Relationships**
      - A payment belongs to a user.
      - A payment is linked to one booking.
+
+## Feature Breakdown
+
+This project includes several core features that work together to replicate the functionality of the Airbnb platform. Each feature is designed to enhance the user experience for both guests and hosts.
+
+1. ### User Management
+   Enables users to register, authenticate, and manage their profiles. This system ensures secure access to the platform and allows users to interact with other features such as property listings and bookings.
+2. ### Property Management
+   Allows hosts to create, update, and manage property listings. Each listing includes details like description, pricing, and availability, helping guests find suitable accommodations.
+3. ### Booking System
+   Provides functionality for guests to reserve properties based on availability. Bookings include check-in and check-out dates, ensuring accurate scheduling and avoiding conflicts.
+4. ### Payment Processing
+   Handles secure financial transactions for property bookings. This feature ensures that all payments are recorded, validated, and linked to the appropriate users and bookings.
+5. ### Review System
+   Allows guests to leave feedback and ratings for properties after their stay. Reviews help build trust and transparency between users by showcasing previous guest experiences.
+6. ### API Integration
+   Offers both RESTful and GraphQL APIs for seamless data access and integration. These APIs ensure flexibility and scalability for front-end and third-party service integration.
+7. ### Asynchronous Task Handling
+   Utilizes Celery and Redis to handle background tasks such as sending notifications or processing payments. This ensures responsiveness and efficiency across the platform.
