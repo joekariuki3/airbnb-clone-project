@@ -106,3 +106,37 @@ This project includes several core features that work together to replicate the 
    Offers both RESTful and GraphQL APIs for seamless data access and integration. These APIs ensure flexibility and scalability for front-end and third-party service integration.
 7. ### Asynchronous Task Handling
    Utilizes Celery and Redis to handle background tasks such as sending notifications or processing payments. This ensures responsiveness and efficiency across the platform.
+
+## API Security
+
+Security is a critical aspect of the Airbnb Clone project to ensure user trust, protect sensitive data, and maintain the integrity of all operations. The following key measures will be implemented to safeguard the backend APIs:
+
+1. ### Authentication
+
+   Token-based authentication will be used to verify user identity before granting access to protected endpoints.
+
+   This prevents unauthorized access and ensures that only registered users can perform actions such as booking properties or editing listings.
+
+2. ### Authorization
+
+   Role-based access control (RBAC) will restrict access to certain features based on user roles.
+
+   This protects resources by ensuring users can only perform actions they’re permitted to. e.g., a guest cannot modify someone else’s property listing.
+
+3. ### Rate Limiting
+
+   Limits the number of requests a user or client can make in a defined time window to prevent abuse (e.g., brute force attacks or API flooding).
+
+   This enhances system stability and reduces the risk of denial-of-service (DoS) attacks or overuse of backend resources.
+
+4. ### Data Encryption
+
+   Sensitive data such as passwords will be hashed using strong algorithms, and HTTPS will be enforced for all communication.
+
+   This ensures that personal and payment data remain secure during storage and transmission, reducing the risk of leaks or interception.
+
+5. ### Input Validation & Sanitization
+
+   All incoming data will be validated and sanitized to prevent injection attacks and enforce data integrity.
+
+   This protects against common attack vectors like SQL injection, cross-site scripting (XSS), and malformed requests that could compromise the system.
